@@ -1,5 +1,11 @@
 execute pathogen#infect()
 
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'rosenfeld/conque-term'
+
 syntax on
 
 filetype indent on
@@ -23,6 +29,8 @@ set showmatch
 
 autocmd BufWritePre * :%s/\s\+$//e
 autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
+autocmd VimEnter * ConqueTermSplit bash
 autocmd VimEnter * wincmd p
 
 nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
