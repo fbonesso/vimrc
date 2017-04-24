@@ -31,7 +31,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
 autocmd VimEnter * ConqueTermSplit bash
-autocmd VimEnter * wincmd p
+autocmd VimEnter * resize 10
 
 nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
 
